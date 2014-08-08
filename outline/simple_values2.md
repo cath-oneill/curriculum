@@ -38,6 +38,18 @@ Keywords are the strangest of the basic value types, because they don't have a r
 
 Write the name of your hometown as a string, and then assign that string to the name `my-hometown`.
 
-### EXERCISE: Make a function to format names
+### EXERCISE: Make a function to format your name and location
 
-The `str` function can take any number of arguments, and it concatenates them together to make a string. Write a function called `format-name` that takes two arguments, `first-name` and `last-name`. This function should output the name like so: `Last, First`.
+The `str` [See Docs](http://clojuredocs.org/clojure_core/clojure.core/str) function can take any number of arguments, and concatenates them together to make a single string. Write a function called `format-location` that takes two arguments, `first-name` and `last-name` and uses the my-hometown variable. This function should output the like so: `Last, First from hometown`. 
+
+example:
+```
+(def my-hometown "Austin")
+(format-location "Jane" "Doe")    
+```
+Should output:
+
+```
+Doe, Jane from Austin
+```
+
