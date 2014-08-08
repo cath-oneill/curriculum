@@ -1,8 +1,16 @@
 More Data Structures
 ===============
 
-* Maps
+* Keywords and Maps
 * Collections of Collections
+
+## Keywords
+
+```clj
+:first  
+:last
+```
+Keywords are the strangest of the basic value types, because they don't have a real world analog like numbers, strings, and booleans do. You can think of them as a special type of string, one that's used for labels.
 
 ## Maps
 

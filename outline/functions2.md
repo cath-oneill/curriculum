@@ -8,7 +8,7 @@ More Functions
 
 ## Important functions
 
-There are some functions that are essential when using Clojure. The arithmetic functions and `str` have already been covered, and you need to know them. Let's look at some others.
+There are some functions that are essential when using Clojure. The arithmetic functions and `str` have already been covered. Let's look at some others.
 
 ### Comparison (boolean) functions
 
@@ -20,7 +20,11 @@ You can use the function `=` to test the equality of two things. For example, he
   (= x 42))
 ```
 
-The other comparison functions are `>`, `>=`, `<`, `<=`, and `not=`, and all but the last of these are used exclusively with numbers. Like all Clojure functions, the comparison functions are used as prefixes, so they can be a little tricky. Here's some examples:
+The other comparison functions are `>`, `>=`, `<`, `<=`, and `not=`, and all but the last of these are used exclusively with numbers. Like all Clojure functions, the comparison functions are used as prefixes, so they can be a little tricky. 
+
+    Note: it is convention to put at ? at the end of the function if it returns a boolean value.
+
+Here's some examples:
 
 ```clj
 (> 4 3)    ;=> true
