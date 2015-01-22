@@ -25,16 +25,19 @@
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Creating a project</h3>
           <p>Type the following in your terminal:</p>
-          <pre>
-<code class="bash">lein new quil drawing-demo</code></pre>
+          <pre><code class="bash">lein new quil drawing-demo</code></pre>
            <ul>
-			   <li><strong>drawing-demo</strong> is the name of your project, it can be whatever you want.</li>
+			   <li><strong>drawing-demo</strong> is the name of your project, 
+				   it can be whatever you want.</li>
 		   </ul>
+		   
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">lein - Leiningen</h3>
           <ul>
             <li>manages Clojure projects</li>
@@ -43,9 +46,11 @@
 
             <li>silly name</li>
           </ul>
+		  
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Project structure</h3>
           <ul>
             <li><b>project.clj</b></li>
@@ -54,9 +59,11 @@
 
             <li><b>src/drawing-demo/core.clj</b></li>
           </ul>
+		  
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">project.clj</h3>
           <ul>
             <li>configuration file for Leiningen</li>
@@ -65,12 +72,13 @@
 
             <li>contains information about program author, description and more</li>
           </ul>
+		  
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Requiring dependencies</h3>
-          <pre>
-<code class="clojure">
+          <pre><code class="clojure">
 (ns drawing-demo.core
   (:require [quil.core :as q]
             [quil.middleware :as m]))</code></pre>
@@ -80,29 +88,35 @@
 				<li><code class="clojure">(q/background 240)</code>  vs</li>
 				<li><code class="clojure">(quil.core/background 240)</code></li>
 			</ul>
+			
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Try the Example</h3>
           <ul>
-          <li>Open src/drawing-demo/core.clj in lightable</li>
-          <li>Now evaluate the file</li>
-		  <li>Mac: press Cmd + Shift + Enter</li>
-		  <li>Windows/Linux Ctrl + Shift + Enter)</li>
-		  <li>After a moment Your drawing should appear.</li>
-		  <ul>
+            <li>Open src/drawing-demo/core.clj in lightable</li>
+            <li>Now evaluate the file</li>
+		    <li>Mac: press Cmd + Shift + Enter</li>
+		    <li>Windows/Linux Ctrl + Shift + Enter)</li>
+		    <li>After a moment Your drawing should appear.</li>
+		  </ul>
+			  
         </section>
 		
         <section>
-          <h2 class="slide-title chapter">Modifying a project</h2>
+			
+          <h3 class="slide-title chapter">Modifying a project</h2>
           <p>That was an example but we are going to make a new file.</p>
 		  <ul>
 		    <li>Create a new file in lighttable</li>
-			<li><code>src/drawing-demo/sample.clj</li>
+			<li><code>src/drawing-demo/sample.clj</code></li>
 		  </ul>
+		  
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Anatomy of a Quil App</h3>
           <p>Most basic drawing needs only 2 functions defined:</p>
 		  <ul>
@@ -110,9 +124,11 @@
 			  <li>(defn draw [])</li>
 		  </ul>
           <p>Open <code>src/drawing-demo/sample.clj</code>.</p>
+		  
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Setting up</h3>
           <pre>
 <code class="clojure">(defn setup []
@@ -121,9 +137,11 @@
   ;; Set the stroke color
   (q/stroke 255 0 0)) 
 </code></pre>
+
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Draw Example</h3>
           <pre>
 <code class="clojure">(defn draw []
@@ -134,9 +152,11 @@
 			<li>(q/line start-x start-y end-x end-y)</li>
 		</ul>
 		<img src="img/first_lines.png">
+		
         </section>
 
         <section>
+			
           <h3 class="slide-title slide">Creating a sketch</h3>
           <pre>
 <code class="clojure">(q/defsketch drawing-demo
@@ -145,6 +165,7 @@
   :setup setup  ;;name of setup method
   :draw draw)   ;;name of draw method
 </code></pre>
+
         </section>
 
 
