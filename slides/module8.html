@@ -26,15 +26,16 @@
 
         <section>
           <h3 class="slide-title slide">Creating a project</h3>
-
           <p>Type the following in your terminal:</p>
           <pre>
-<code class="bash">lein new quil drawing</code></pre>
+<code class="bash">lein new quil drawing-demo</code></pre>
+           <ul>
+			   <li><strong>drawing-demo</strong> is the name of your project, it can be whatever you want.</li>
+		   </ul>
         </section>
 
         <section>
           <h3 class="slide-title slide">lein - Leiningen</h3>
-
           <ul>
             <li>manages Clojure projects</li>
 
@@ -46,26 +47,23 @@
 
         <section>
           <h3 class="slide-title slide">Project structure</h3>
-
           <ul>
             <li><b>project.clj</b></li>
 
             <li>README.md</li>
 
-            <li><b>src/drawing/core.clj</b></li>
+            <li><b>src/drawing-demo/core.clj</b></li>
           </ul>
         </section>
 
         <section>
           <h3 class="slide-title slide">project.clj</h3>
-
           <ul>
             <li>configuration file for Leiningen</li>
 
             <li>lists dependencies</li>
 
-            <li>contains information about program author,
-            description and more</li>
+            <li>contains information about program author, description and more</li>
           </ul>
         </section>
 
@@ -78,7 +76,7 @@
             [quil.middleware :as m]))</code></pre>
 			<ul>
 				<li>Some library names are long to type</li>
-				<li>:as is an alias</li>
+				<li>:as means alias</li>
 				<li><code class="clojure">(q/background 240)</code>  vs</li>
 				<li><code class="clojure">(quil.core/background 240)</code></li>
 			</ul>
@@ -87,7 +85,7 @@
         <section>
           <h3 class="slide-title slide">Try the Example</h3>
           <ul>
-          <li>Open src/drawing/core.clj in lightable</li>
+          <li>Open src/drawing-demo/core.clj in lightable</li>
           <li>Now evaluate the file</li>
 		  <li>Mac: press Cmd + Shift + Enter</li>
 		  <li>Windows/Linux Ctrl + Shift + Enter)</li>
@@ -97,19 +95,21 @@
 		
         <section>
           <h2 class="slide-title chapter">Modifying a project</h2>
-          <p>That is an example but we are going to make a new file.</p>
-
+          <p>That was an example but we are going to make a new file.</p>
+		  <ul>
+		    <li>Create a new file in lighttable</li>
+			<li><code>src/drawing-demo/sample.clj</li>
+		  </ul>
         </section>
 
         <section>
           <h3 class="slide-title slide">Anatomy of a Quil App</h3>
-          <p>Most basic drawing needs only 3 things:</p>
+          <p>Most basic drawing needs only 2 functions defined:</p>
 		  <ul>
-			  <li>setup</li>
-			  <li>draw</li>
-			  <li>q/defsketch</li>
+			  <li>(defn setup [])</li>
+			  <li>(defn draw [])</li>
 		  </ul>
-          <p>Open <code>src/drawing/core.clj</code>.</p>
+          <p>Open <code>src/drawing-demo/sample.clj</code>.</p>
         </section>
 
         <section>
